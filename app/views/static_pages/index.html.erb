@@ -1,9 +1,114 @@
-<h1>landing page stuff</h1>
+<!-- JUMBOTRON -->
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4 title">Codels</h1>
+    <hr>
+    <h4>Don't know where to start? Let us help!</h4>
+  </div>
+</div>
+
+<!-- CATEGORIES -->
+<div id="categories">
+  <div class="container">
+    <div class="row justify-content-start">
+      <div class="cards-list">
+        <% @categories.each do |category| %>
+          <div class="card">
+            <div class="card_image"> <img src="https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80" /> </div>
+            <div class="card_title title-white">
+              <h5 class="card-title title"><%= link_to category.title, category_path(category), class: "title-white" %></h5>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br />
+
+<!-- SUGGESTED WEBSITES (3) -->
+<h1 class="subtitle">Our Suggestions for Beginners</h1>
+<hr />
+  
+  <div class="container">
+    <div class="row justify-content-start">
+      <div class="card-flip-container">
+        <div class="card-flip">
+          <div class="front-flip">
+            <img src="https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg" alt="" style="height: 100%; width: 100%">
+          </div>
+          <div class="back-flip">
+            <h5>TITLE</h5>
+            <p>Description lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati</p>
+            <button>Check this out!</button>
+          </div>
+        </div>
+      </div>
+      <div class="card-flip-container">
+        <div class="card-flip">
+          <div class="front-flip"><p>Front</p></div>
+          <div class="back-flip"><p>Back</p></div>
+        </div>
+      </div>
+      <div class="card-flip-container">
+        <div class="card-flip">
+          <div class="front-flip"><p>Front</p></div>
+          <div class="back-flip"><p>Back</p></div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+
+<br />
+<br />
 
 
-<% @categories.each do |category| %>
-<h1><%= category.title %></h1>
+<!-- FEATURED WEBSITE -->
+<div id="feature">
+  <h1 class="subtitle">Or check out this randomly selected site!</h1>
+  <hr />
+    <div class="blog-card">
+    <div class="meta">
+      <div class="photo" style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg)"></div>
+      <ul class="details">
+        <li class="tags">
+          <ul>
+            <li><a href="#">tag1</a></li>
+            <li><a href="#">tag2</a></li>
+            <li><a href="#">tag3</a></li>
+            <li><a href="#">tag4</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="description">
+      <h1>Learning to Code</h1>
+      <h2>Opening a door to the future</h2>
+      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+      <p class="read-more">
+        <a href="#">Read More</a>
+      </p>
+    </div>
+  </div>
+</div>
 
+<hr />
 
-<h2>ADD HERE GRID OF CATEGORIES CARDS</h2>
-<% end %>
+<!-- ABOUT SECTION -->
+<div id="about">
+  <h1 class="subtitle">About Us</h1>
+  <hr />
+  <p class="bio">
+        Built with ❤️ [and stress. Mostly stress] in El Paso, Texas. © 2019 All Rights Reserved by Rosy Arreola.
+        <br />
+        <br />
+        <strong>Codels</strong> is an attempt at gathering and showcasing useful resources for beginner and veteran programmers, which stemmed from an excessive hoarding of bookmarks, and a need to categorize them to make them easier to find. 
+        <br />
+        <br />
+        Currently in its infancy, please give <strong>Baby Codels</strong> time to grow.
+  </p>
+</div>

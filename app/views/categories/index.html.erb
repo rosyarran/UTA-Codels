@@ -1,6 +1,22 @@
-<% @categories.each do |category| %>
-<h1><%= category.title %></h1>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4 title">All Categories</h1>
+  </div>
+</div>
 
-
-<h2>ADD HERE GRID OF CATEGORIES CARDS</h2>
-<% end %>
+<div class="cards-list">
+  <div class="container">
+    <div class="row justify-content-start">
+      <div class="cards-list">
+        <% @categories.each do |category| %>
+          <div class="card">
+            <div class="card_image"> <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80" /> </div>
+            <div class="card_title title-white">
+              <h5 class="card-title title"><%= category.title %></h5>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

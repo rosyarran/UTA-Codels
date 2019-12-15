@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Resources</title>
+    <title>Codels</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -29,10 +29,13 @@
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-               
-                <% @categories.each do |category| %>
-                  <%= link_to category.title, category_path(category), class: "dropdown-item" %>
-                <% end %>
+                <a href="/categories/1" class="dropdown-item">Backend</a>
+                <a href="/categories/2" class="dropdown-item">Backend</a>
+                <a href="/categories/3" class="dropdown-item">Backend</a>
+                <a href="/categories/4" class="dropdown-item">Backend</a>
+                <a href="/categories/5" class="dropdown-item">Backend</a>
+                <a href="/categories/6" class="dropdown-item">Backend</a>
+                <a href="/categories/7" class="dropdown-item">Backend</a>
                 
                 <%= link_to 'All Categories', categories_path, {:style=>'color:#004d40;', :class => "nav-link"} %>
               </div>
